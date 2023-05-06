@@ -5,7 +5,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 archivo = BASE_DIR + '\\csv\\estados.csv'
 archivo_viajes = BASE_DIR + '\\csv\\viajes.csv'
-archivo_nuevo = BASE_DIR + '\\csv\\estados_chat.csv'
+archivo_nuevo = BASE_DIR + '\\csv\\estados_con_viajes.csv'
 
 # Read the viajes.csv file into a dictionary
 viajes_dict = {}
@@ -109,3 +109,4 @@ with open(archivo) as csv_file:
                 writer.writerow(line)
 
 print('Proceso Terminado. Encontrados: Vacios {}, Llenos {}, normales {}'.format(vacios, llenos, normales))
+print('Se ha creado el arcivo "{}".'.format(archivo_nuevo))
